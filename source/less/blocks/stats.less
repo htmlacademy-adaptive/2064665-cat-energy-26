@@ -1,3 +1,9 @@
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .stats__item-comment {
   font-family: "Arial", sans-serif;
   font-size: 12px;
@@ -8,4 +14,10 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .stats {
+    justify-content: flex-start;
+  }
 }

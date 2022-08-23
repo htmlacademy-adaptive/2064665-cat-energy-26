@@ -24,3 +24,30 @@
   line-height: 14px;
   margin: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .addition-item {
+    padding: 26px 38px;
+    display: grid;
+    grid-template-rows: 46px 40px;
+    grid-template-columns: auto 225px;
+  }
+
+  .addition-item__title,
+  .addition-item__description {
+    grid-row: 1 / 2;
+  }
+
+  .addition-item__title {
+    grid-column: 1 / 2;
+  }
+
+  .addition-item__description {
+    grid-column: 2 / 3;
+  }
+
+  .addition-item__button {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+}

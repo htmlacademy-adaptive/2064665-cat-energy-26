@@ -6,10 +6,42 @@
   font-size: 36px;
   line-height: 40px;
   margin: 0;
+  margin-bottom: 42px;
 }
 
 .about__description {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   margin: 0;
+  margin-bottom: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .about__wrapper {
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+
+  .about__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 600px;
+  }
+
+  .about__item {
+    width: 246px;
+    min-height: 280px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about__wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .about__list {
+    min-height: 280px;
+  }
 }

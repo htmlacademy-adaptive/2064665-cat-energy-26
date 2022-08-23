@@ -11,3 +11,17 @@
   margin: 0;
   padding-bottom: 41px;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog-container__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-container__list {
+    column-gap: 80px;
+  }
+}
