@@ -30,3 +30,20 @@
 .form-contact__owner-input::placeholder {
   color: @gray-444444;
 }
+
+@media (min-width: @tablet-width) {
+  .form-contact {
+    min-height: 236px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-contact {
+    min-height: 210px;
+  }
+
+  .form-contact__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
