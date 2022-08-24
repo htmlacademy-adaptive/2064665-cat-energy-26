@@ -51,3 +51,33 @@
     grid-column: 1 / -1;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .addition-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .addition-item {
+    padding: 0;
+    grid-template-rows: 72px;
+    grid-template-columns: 325px 245px 80px 245px;
+  }
+
+  .addition-item__title {
+    grid-column: 1 / 2;
+  }
+
+  .addition-item__type {
+    grid-column: 2 / 3;
+  }
+
+  .addition-item__price {
+    grid-column: 3 / 4;
+  }
+
+  .addition-item__button {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+  }
+}

@@ -18,3 +18,29 @@
   text-transform: uppercase;
   padding-bottom: 24px;
 }
+
+@media (min-width: @tablet-width) {
+  .form-addition {
+    min-height: 230px;
+  }
+
+  .form-addition__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-addition__item {
+    min-width: 285px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-addition {
+    min-height: 175px;
+  }
+
+  .form-addition__item {
+    min-width: 245px;
+  }
+}
