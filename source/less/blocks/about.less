@@ -1,5 +1,6 @@
 .about__wrapper {
   padding: 20px;
+  padding-top: 0;
 }
 
 .about__title {
@@ -12,8 +13,7 @@
 .about__description {
   font-family: "Arial", sans-serif;
   font-size: 14px;
-  margin: 0;
-  margin-bottom: 26px;
+  margin: 0 0 26px 100px;
 }
 
 @media (min-width: @tablet-width) {
@@ -30,9 +30,30 @@
   }
 
   .about__item {
+    position: relative;
     width: 246px;
     min-height: 280px;
   }
+}
+
+.about__leaf {
+  content: url("../img/leaf.png");
+  position: absolute;
+}
+
+.about__boil {
+  content: url("../img/boil.png");
+  position: absolute;
+}
+
+.about__eat {
+  content: url("../img/eat.png");
+  position: absolute;
+}
+
+.about__alarm {
+  content: url("../img/alarm.png");
+  position: absolute;
 }
 
 @media (min-width: @desktop-width) {

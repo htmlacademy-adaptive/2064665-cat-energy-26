@@ -1,4 +1,5 @@
 .main-footer__wrapper {
+  position: relative;
   background-color: @gray-f2f2f2;
 }
 
@@ -12,7 +13,18 @@
 }
 
 .main-footer__copyright {
-  padding: 28px 0 32px 20px;
+  padding: 28px 0 32px 0;
+}
+
+.main-footer__bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 170px;
+  left: 20px;
+  width: 280px;
+  height: 1px;
+  background-color: @gray-d9d9d9;
+  box-shadow: 0 63px 0 0 @gray-d9d9d9;
 }
 
 @media (min-width: @tablet-width) {

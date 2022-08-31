@@ -2,6 +2,7 @@
   background-image: url("../img/cat-tongue.jpg");
   background-size: 320px 302px;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .main-container__title {
@@ -10,7 +11,7 @@
   line-height: 36px;
   color: @white;
   margin: 0;
-  padding: 27px 36px 25px;
+  padding: 27px 35px 25px;
 }
 
 .main-container__slogan {
@@ -19,10 +20,31 @@
   line-height: 14px;
   color: @white;
   margin: 0;
-  padding: 20px 62px 29px;
+  padding: 20px 62px 290px;
+}
+
+.main-container__product {
+  position: absolute;
+  left: 10px;
+  top: 170px;
+}
+
+.main-container__cat-slim {
+  content: url("../img/cat-slim.png");
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.main-container__cat-pro {
+  content: url("../img/cat-pro.png");
+  position: absolute;
+  top: 20px;
+  left: 13px;
 }
 
 .main-container__diet {
+  position: relative;
   background-color: @gray-f2f2f2;
   padding: 30px 20px 22px;
   margin-bottom: 20px;
@@ -31,19 +53,35 @@
 .main-container__button {
   font-size: 14px;
   line-height: 18px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 20px;
 }
 
 .main-container__diet-title {
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
-  margin: 0;
+  margin: 0 0 29px 90px;
 }
 
 .main-container__diet-description {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   margin: 0;
+  margin-bottom: 42px;
+  padding: 0 27px 0 20px;
+  position: relative;
+}
+
+.main-container__diet-description::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 240px;
+  background-color: @gray-d9d9d9;
+  bottom: -23px;
+  left: 20px;
 }
 
 .main-container__diet-button {
@@ -53,10 +91,16 @@
   text-decoration: none;
 }
 
+.main-container__diet-button::after {
+  position: absolute;
+  content: url("../img/arrow.svg");
+  left: 105px;
+}
+
 @media (min-width: @tablet-width) {
   .main-container {
     background-image: none;
-    position: relative;
+    // position: relative;
   }
 
   .main-container__promo {
@@ -68,17 +112,38 @@
     color: @black;
   }
 
+  .main-container__title {
+    padding-top: 62px;
+    padding-left: 87px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .main-container__slogan {
+    padding-top: 40px;
+    padding-left: 87px;
+    text-transform: uppercase;
+  }
+
   .main-container__button {
     position: absolute;
-    top: 100;
-    left: 20px;
+    top: 300px;
+    left: 87px;
     width: 244px;
     height: 54px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 20px 15px 20px;
+    display: block;
+    box-sizing: border-box;
   }
 
   .main-container__product {
-    width: 609px;
-    height: 709px;
+    width: 709px;
+    height: 609px;
+    left: 40px;
+    top: 270px;
+    z-index: -1;
   }
 
   .main-container__diet {
@@ -86,6 +151,20 @@
     margin-bottom: 30px;
     width: 708px;
     min-height: 372px;
+  }
+
+  .main-container__cat-slim {
+    position: absolute;
+    top: 20px;
+    left: 400px;
+    width: 40%;
+  }
+
+  .main-container__cat-pro {
+    content: url("../img/cat-pro.png");
+    position: absolute;
+    top: 20px;
+    left: 13px;
   }
 }
 
