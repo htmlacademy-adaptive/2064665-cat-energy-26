@@ -5,9 +5,24 @@
 }
 
 .site-list__item {
+  position: relative;
   text-transform: uppercase;
   text-align: center;
-  border-top: 1px solid @gray-e6e6e6;
+  // border-top: 1px solid @gray-e6e6e6;
+}
+
+.site-list__item::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  width: 320px;
+  height: 1px;
+  background-color: @gray-e6e6e6;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .site-list__link {
@@ -18,4 +33,9 @@
   line-height: 20px;
   text-decoration: none;
   color: inherit;
+
+  @media (min-width: @desktop-width) {
+    padding: 5px;
+    margin-right: 25px;
+  }
 }

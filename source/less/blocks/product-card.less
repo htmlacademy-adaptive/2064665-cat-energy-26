@@ -3,6 +3,15 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    // min-height: 511px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
 }
 
 .product-card__image {
@@ -50,17 +59,4 @@
   font-size: 12px;
   line-height: 16px;
   margin: 0;
-}
-
-@media (min-width: @tablet-width) {
-  .product-card {
-    width: 324px;
-    min-height: 511px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .product-card {
-    width: 245px;
-  }
 }

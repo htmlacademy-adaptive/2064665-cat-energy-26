@@ -1,5 +1,14 @@
 .more {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    min-height: 511px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
 }
 
 .more__title {
@@ -21,17 +30,4 @@
   appearance: none;
   width: 100%;
   display: block;
-}
-
-@media (min-width: @tablet-width) {
-  .more {
-    width: 324px;
-    min-height: 511px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .more {
-    width: 245px;
-  }
 }

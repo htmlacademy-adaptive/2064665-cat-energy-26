@@ -13,6 +13,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form-contact__owner-data {
@@ -29,21 +34,4 @@
 
 .form-contact__owner-input::placeholder {
   color: @gray-444444;
-}
-
-@media (min-width: @tablet-width) {
-  .form-contact {
-    min-height: 236px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .form-contact {
-    min-height: 210px;
-  }
-
-  .form-contact__list {
-    display: flex;
-    justify-content: space-between;
-  }
 }

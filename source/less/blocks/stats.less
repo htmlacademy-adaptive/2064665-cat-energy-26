@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+  }
 }
 
 .stats__item {
@@ -11,6 +15,12 @@
   padding: 0;
   padding-top: 14px;
   padding-bottom: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .stats__item:first-of-type {
+    margin-right: 42px;
+  }
 }
 
 .stats__item-comment {
@@ -34,10 +44,4 @@
 .stats__wrapper,
 .stats__item-comment {
   transform: rotate(180deg);
-}
-
-@media (min-width: @tablet-width) {
-  .stats {
-    justify-content: flex-start;
-  }
 }

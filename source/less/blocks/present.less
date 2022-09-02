@@ -2,6 +2,15 @@
   background-image: url("../img/cat-bag.jpg");
   background-size: 280px 290px;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-size: 707px 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    background-size: 245px 290px;
+  }
 }
 
 .present__description {
@@ -14,15 +23,3 @@
   text-align: center;
 }
 
-@media (min-width: @tablet-width) {
-  .present {
-    background-size: 707px 200px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .present {
-    width: 245px;
-    background-size: 245px 290px;
-  }
-}

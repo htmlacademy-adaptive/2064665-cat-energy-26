@@ -1,6 +1,13 @@
 .example {
   background-color: @gray-eaeaea;
   padding: 25px 20px 40px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+    padding-bottom: 0;
+    margin-bottom: 716px;
+  }
 }
 
 .example__title {
@@ -9,6 +16,10 @@
   line-height: 40px;
   margin: 0;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+  }
 }
 
 .example__description {
@@ -27,20 +38,40 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 0;
+    top: 200px;
+  }
 }
 
 .example__cat-compare {
   margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 560px;
+    height: auto;
+    left: 124px;
+    background-image: linear-gradient(@white 33%, @gray-eaeaea 33%, @gray-eaeaea 66%);
+    background-size: 1000%;
+    z-index: 1;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .example {
-    min-height: 1080px;
+  .example__sum {
+    top: 220px;
+  }
+
+  .example::after {
+    position: absolute;
+    content: "";
+    width: 768px;
+    height: 462px;
+    background-color: @gray-eaeaea;
+    bottom: -650px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .example {
-    min-height: 600px;
-  }
-}
