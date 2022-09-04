@@ -17,9 +17,14 @@
   padding-bottom: 17px;
 }
 
-@media (min-width: @tablet-width) {
-  .stats__item:first-of-type {
+
+.stats__item:first-of-type {
+  @media (min-width: @tablet-width) {
     margin-right: 42px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 110px;
   }
 }
 
@@ -28,12 +33,22 @@
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .stats__date {
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .stats__wrapper {

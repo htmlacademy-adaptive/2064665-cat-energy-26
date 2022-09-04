@@ -8,7 +8,7 @@
   padding: 40px 0 32px 96px;
 
   @media (min-width: @tablet-width) {
-    padding: 63px 0 0 30px;
+    padding: 0;
   }
 }
 
@@ -17,15 +17,14 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    padding-top: 64px;
   }
 }
 
 .main-footer__copyright {
-  padding: 28px 0 32px 0;
+  padding: 28px 20px 32px 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 64px 32px 0 0;
+    padding: 0;
   }
 }
 
@@ -44,10 +43,15 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .main-footer__bottom {
+.main-footer__bottom {
+  @media (min-width: @tablet-width) {
+    padding: 63px 30px 60px;
     display: flex;
     justify-content: space-between;
-    min-height: 150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 63px 110px 62px;
   }
 }
+

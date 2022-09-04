@@ -20,7 +20,7 @@
   height: 1px;
   background-color: @gray-e6e6e6;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }
@@ -34,8 +34,37 @@
   text-decoration: none;
   color: inherit;
 
+  @media (min-width: @tablet-width) {
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
   @media (min-width: @desktop-width) {
     padding: 5px;
     margin-right: 25px;
+    font-size: 20px;
+    line-height: 30px;
+    color: @white;
+  }
+}
+
+.site-list__item:first-of-type .site-list__link::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 64px;
+    height: 2px;
+    background-color: @green-68b738;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 40px;
+    left: 5px;
+    width: 71px;
+    background-color: @white;
   }
 }
