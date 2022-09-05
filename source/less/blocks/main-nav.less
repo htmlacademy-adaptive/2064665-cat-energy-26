@@ -2,9 +2,9 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 0 30px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     min-height: 80px;
   }
 
@@ -111,15 +111,14 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .main-header {
-    padding: 0;
+.main-nav__wrapper {
+  @media (min-width: @tablet-width) {
+    // margin-right: 30px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-nav__wrapper {
+
+  @media (min-width: @desktop-width) {
     margin-top: 47px;
-    margin-left: 520px;
+    margin-left: 460px;
   }
 }

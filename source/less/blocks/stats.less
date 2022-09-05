@@ -15,6 +15,14 @@
   padding: 0;
   padding-top: 14px;
   padding-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 
@@ -23,7 +31,7 @@
     margin-right: 42px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin-left: 110px;
   }
 }
