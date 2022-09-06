@@ -4,13 +4,33 @@
   line-height: 36px;
   margin: 0;
   padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 56px;
+  }
 }
 
 .form-order__description {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
   padding-bottom: 38px;
+  width: 226px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 66px;
+    width: 323px;
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .form-order {

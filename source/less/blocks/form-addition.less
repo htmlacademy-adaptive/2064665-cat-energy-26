@@ -1,13 +1,29 @@
 .form-addition {
   display: block;
-  padding-top: 22px;
+  padding: 0;
   margin: 0;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 60px;
+  }
 }
 
 .form-addition__title {
   font-size: 24px;
   line-height: 26px;
+  padding: 0;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 57px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form-addition__list {
@@ -21,14 +37,22 @@
 }
 
 .form-addition__item {
-  text-transform: uppercase;
   padding-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     min-width: 285px;
+    padding-bottom: 37px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 245px;
+  }
+}
+
+.form-addition__label {
+  @media (min-width: @tablet-width) {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
   }
 }

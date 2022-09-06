@@ -1,7 +1,9 @@
 .catalog-container {
-  padding-top: 27px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 27px 20px 35px;
+
+  @media (min-width: @tablet-width) {
+    padding: 27px 30px 76px;
+  }
 }
 
 .catalog-container__title {
@@ -10,10 +12,14 @@
   line-height: 36px;
   margin: 0;
   padding-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 82px;
+  }
 }
 
-@media (min-width: @tablet-width) {
-  .catalog-container__list {
+.catalog-container__list {
+  @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

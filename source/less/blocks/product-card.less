@@ -1,16 +1,29 @@
 .product-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 52px 62px 40px;
   padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 242px 37px 39px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
     width: 324px;
-    // min-height: 511px;
+    display: flex;
+    flex-direction: column;
+    background-color: @gray-f2f2f2;
+    background-image: linear-gradient(@white 15%, @gray-f2f2f2 15%, @gray-f2f2f2 85%);
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
+  }
+}
+
+.product-card:nth-last-of-type(-n+2) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -20,6 +33,13 @@
   justify-self: center;
   align-self: end;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    align-self: center;
+    position: absolute;
+    bottom: 363px;
+    padding-bottom: 0;
+  }
 }
 
 .product-card__title {
@@ -29,6 +49,14 @@
   grid-column: 2/-1;
   grid-row: 1/2;
   align-self: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 35px 21px 42px;
+  }
 }
 
 .product-card__description {
@@ -36,9 +64,16 @@
   grid-row: 2/3;
   margin: 0;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 33px;
+  }
 }
 
 .product-card__button {
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 7px;
   grid-column: 1/-1;
   grid-row: 3/-1;
 }
@@ -46,12 +81,21 @@
 .product-card__item {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 9px;
+  }
 }
 
 .product-card__type {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .product-card__value {
@@ -59,4 +103,9 @@
   font-size: 12px;
   line-height: 16px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
