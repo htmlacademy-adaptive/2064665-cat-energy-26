@@ -1,20 +1,98 @@
 .form-person {
-  padding-top: 27px;
-  padding-bottom: 24px;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
+}
+
+.form-person__data-value-name {
+  box-sizing: border-box;
+  width: 230px;
+  padding: 13px 0 13px 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 554px;
+    padding: 10px 0 12px 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 506px;
+  }
+}
+
+.form-person__data-value-weight {
+  box-sizing: border-box;
+  width: 204px;
+  padding: 13px 0 13px 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 526px;
+    padding: 10px 0 12px 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 475px;
+  }
+}
+
+.form-person__data-value-age {
+  box-sizing: border-box;
+  width: 172px;
+  padding: 13px 0 13px 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 485px;
+    padding: 10px 0 12px 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+  }
 }
 
 .form-person__person-data {
   padding-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.form-person__person-data:last-of-type {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .form-person__data-name {
   color: @gray-444444;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form-person__data-value {
   font: inherit;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 0 10px 20px;
+  }
 }
 
 .form-person__data-value::placeholder {
+  text-transform: uppercase;
   color: @gray-444444;
+  opacity: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 0 10px 20px;
+  }
 }

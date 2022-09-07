@@ -6,7 +6,7 @@
     <title>Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--index">
     <header class="main-header">
       <nav class="main-nav">
         <div class="main-nav__logo-wrapper">
@@ -19,18 +19,18 @@
             </svg>
           </a>
         </div>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper main-nav__wrapper--opened main-nav__wrapper--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="main-nav__list site-list reset-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="index.html">главная</a>
+              <a class="site-list__link site-list__link--index site-list__link--current" href="index.html">главная</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">каталог продукции</a>
+              <a class="site-list__link site-list__link--index" href="catalog.html">каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="form.html">подбор программы</a>
+              <a class="site-list__link site-list__link--index" href="form.html">подбор программы</a>
             </li>
           </ul>
         </div>
@@ -45,6 +45,7 @@
       </section>
       <div class="main-container__diet-wrapper">
         <section class="main-container__diet">
+          <span class="main-container__cat-slim"></span>
           <h2 class="main-container__diet-title">похудение</h2>
           <p class="main-container__diet-description">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
@@ -52,6 +53,7 @@
           <a class="main-container__diet-button" href="#">каталог slim</a>
         </section>
         <section class="main-container__diet">
+          <span class="main-container__cat-pro"></span>
           <h2 class="main-container__diet-title">набор массы</h2>
           <p class="main-container__diet-description">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -64,18 +66,22 @@
           <h2 class="about__title">Как это работает</h2>
           <ul class="about__list reset-list">
             <li class="about__item about__item--leaf">
+              <span class="about__leaf"></span>
               <p class="about__description">Функциональное питание содержит только полезные питательные вещества.
               </p>
             </li>
             <li class="about__item about__item--boil">
+              <span class="about__boil"></span>
               <p class="about__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
               </p>
             </li>
-            <li class="about__item about__item--cutlery">
+            <li class="about__item about__item--eat">
+              <span class="about__eat"></span>
               <p class="about__description">Замените один-два приема обычной еды на наше функциональное питание.
               </p>
             </li>
-            <li class="about__item about__item--weigher">
+            <li class="about__item about__item--alarm">
+              <span class="about__alarm"></span>
               <p class="about__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
               </p>
             </li>
@@ -90,32 +96,36 @@
         <!-- </div> -->
         <div class="stats">
           <fieldset class="stats__item">
-            <legend class="stats__item-comment">снижение веса</legend>
-            <b class="stats__date">5 кг</b>
+            <legend class="stats__item-comment">снижение <br>веса</legend>
+            <div class="stats__wrapper">
+              <b class="stats__date stats__date--weight">5 кг</b>
+            </div>
           </fieldset>
-        <!-- </div> -->
-        <!-- <div class="stats"> -->
+          <!-- </div> -->
+          <!-- <div class="stats"> -->
           <fieldset class="stats__item">
-            <legend class="stats__item-comment">затрачено времени</legend>
-            <b class="stats__date">60 ДНЕЙ</b>
+            <legend class="stats__item-comment">затрачено <br>времени</legend>
+            <div class="stats__wrapper">
+              <b class="stats__date stats__date--days">60 ДНЕЙ</b>
+            </div>
           </fieldset>
         </div>
-
         <span class="example__expense">затраты на питание:</span>
         <span class="example__sum">15 000 РУБ.</span>
-
-        <img class="example__cat-compare" src="img/semi-cat.png" width="280" height="256" alt="Толстый кот.">
+        <img class="example__cat-compare" src="img/semi-cat.png" width="280" height="256" alt="Сравнение котов.">
         <span class="example__compare-slide"></span>
       </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <section class="main-footer__contacts index-contacts contacts">
-          <h1 class="contacts__title">приглашаем к сотрудничеству дилеров!</h1>
-          <p class="contacts__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <section class="main-footer__contacts main-footer__contacts--white contacts">
+          <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
+          <p class="contacts__description">ул. Большая Конюшенная, д. 19/8 <span class="contacts__break"></span> Санкт-Петербург</p>
         </section>
         <div class="location">
-          <img class="location__map" src="img/location.jpg" width="280" height="270" alt="Мы находимся в центре Санкт-Петербурга">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1661957620238!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Мы находимся в центре Санкт-Петербурга">
+          </iframe>
         </div>
         <div class="main-footer__bottom">
           <a class="main-footer__logo" href="#">
@@ -146,12 +156,13 @@
           </div>
           <div class="main-footer__copyright copyright">
             <a class="copyright__text" href="https://htmlacademy.ru">HTML Academy
-              <svg aria-hidden="true" focusable="false" width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg"><path d="M13.6 0h-.1L0 1.4V26l13.5 8L27 26V1.4L13.6 0Zm11.6 25-11.7 7-11.7-7V15l11.7 6.8v1.3l-8-4.7v1.2l8 4.8v1.3l-8-4.8v1.2l8 4.9 8.1-4.9V17l3.6-2.1V25Zm0-11.5L22 15.3l-1.5 1-7-4.3v1.2l6 3.6-.2.1-.8.5-5-3v1.3l3.9 2.3-1 .6-3-1.7v1.2l2 1.2-2 1.1-11.6-6.8 11.6-7 11.8 6.9Zm0-1.3L13.4 5.3l-11.6 7V3l11.7-1.2L25.2 3v9.2Z" fill="#666"/>
+              <svg class="copyright__logo" aria-hidden="true" focusable="false" width="27" height="34" viewBox="0 0 27 34" xmlns="http://www.w3.org/2000/svg"><path d="M13.6 0h-.1L0 1.4V26l13.5 8L27 26V1.4L13.6 0Zm11.6 25-11.7 7-11.7-7V15l11.7 6.8v1.3l-8-4.7v1.2l8 4.8v1.3l-8-4.8v1.2l8 4.9 8.1-4.9V17l3.6-2.1V25Zm0-11.5L22 15.3l-1.5 1-7-4.3v1.2l6 3.6-.2.1-.8.5-5-3v1.3l3.9 2.3-1 .6-3-1.7v1.2l2 1.2-2 1.1-11.6-6.8 11.6-7 11.8 6.9Zm0-1.3L13.4 5.3l-11.6 7V3l11.7-1.2L25.2 3v9.2Z" fill="#666"/>
               </svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

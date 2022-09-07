@@ -1,13 +1,14 @@
-@media (min-width: @tablet-width) {
-  .personal-wrapper {
-    min-height: 470px;
+.personal-wrapper {
+  @media (min-width: @tablet-width) {
+    // min-height: 470px;
+    padding: 0 40px 75px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .personal-wrapper {
+  @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
-    min-height: 200px;
+    // min-height: 196px;
+    padding: 0;
+    padding-bottom: 69px;
   }
 }
