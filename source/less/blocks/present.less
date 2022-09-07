@@ -2,14 +2,18 @@
   background-image: url("../img/cat-bag.jpg");
   background-size: 280px 290px;
   background-repeat: no-repeat;
+  margin-top: 35px;
+
 
   @media (min-width: @tablet-width) {
     background-size: 707px 200px;
+    margin-top: 69px;
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     background-size: 245px 290px;
+    margin-top: 0;
   }
 }
 
@@ -19,7 +23,14 @@
   line-height: 20px;
   color: @white;
   margin: 0;
-  padding: 187px 61px 0 58px;
+  padding: 187px 61px 43px 58px;
   text-align: center;
-}
 
+  @media (min-width: @tablet-width) {
+    padding: 71px 124px 69px 422px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 185px 43px 42px 41px;
+  }
+}

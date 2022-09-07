@@ -1,24 +1,30 @@
-.addition {
-  padding-top: 13px;
-}
-
 .addition__title {
   display: block;
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 36px;
+  padding: 25px 0 36px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 68px 0 80px 37px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 76px 0 81px 0;
+  }
 }
 
-// @media (min-width: @tablet-width) {
-//   .addition {
-//     min-height: 640px;
-//   }
-// }
+.addition__list {
+  padding: 0 0 35px 0;
 
-// @media (min-width: @desktop-width) {
-//   .addition {
-//     min-height: 405px;
-//   }
-// }
+  @media (min-width: @tablet-width) {
+    padding: 0 0 69px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 86px 0;
+  }
+}
