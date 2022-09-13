@@ -1,19 +1,53 @@
 .present {
-  background-image: url("../img/cat-bag.jpg");
+  position: relative;
+  background-image: url("../img/cat-bag-mobile.jpg");
   background-size: 280px 290px;
   background-repeat: no-repeat;
   margin-top: 35px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/cat-bag-mobile@2x.jpg");
+  }
 
 
   @media (min-width: @tablet-width) {
     background-size: 707px 200px;
     margin-top: 69px;
+    background-image: url("../img/cat-bag-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-bag-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     background-size: 245px 290px;
     margin-top: 0;
+    background-image: url("../img/cat-bag-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-bag-desktop@2x.jpg");
+    }
+  }
+}
+
+.present::after {
+  content: url("../img/icon-gift.svg");
+  position: absolute;
+  width: 78px;
+  height: 80px;
+  top: 59px;
+  left: 101px;
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    left: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 56px;
+    left: 84px;
   }
 }
 
