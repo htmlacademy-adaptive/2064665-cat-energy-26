@@ -23,6 +23,32 @@
   }
 }
 
+.form-diet__control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+}
+
+.form-diet__icon {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @gray-cdcdcd;
+  border-radius: 50%;
+}
+
+.form-diet__input:checked + .form-diet__icon::before {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+  height: 14px;
+  background-color: @green-68b738;
+  border-radius: 50%;
+  content: "";
+}
+
 .form-diet__item {
   padding-bottom: 25px;
   text-transform: uppercase;

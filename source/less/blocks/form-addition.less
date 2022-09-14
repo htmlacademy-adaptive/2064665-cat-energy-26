@@ -56,3 +56,23 @@
     line-height: 30px;
   }
 }
+
+.form-addition__checkbox {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+}
+
+.form-addition__icon {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @gray-cdcdcd;
+}
+
+.form-addition__input:checked + .form-addition__icon {
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
