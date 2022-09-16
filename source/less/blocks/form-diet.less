@@ -1,6 +1,8 @@
 .form-diet {
+  position: relative;
   border: 0;
-  padding-top: 26px;
+  padding-top: 38px;
+  padding-left: 0;
 
   @media (min-width: @tablet-width) {
     border: 1px solid @gray-e7e7e7;
@@ -10,11 +12,40 @@
   @media (min-width: @desktop-width) {
     width: 570px;
     // min-height: min-content;
-    padding: 30px 0 0 28px;
+    padding: 30px 0 0 0;
+  }
+}
+
+.form-diet__list::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -22px;
+  width: 320px;
+  height: 1px;
+  background-color: #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.form-diet__list::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: -22px;
+  width: 320px;
+  height: 1px;
+  background-color: #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
 .form-diet__label {
+  padding-left: 3px;
   color: @gray-222222;
 
   @media (min-width: @tablet-width) {
@@ -27,26 +58,45 @@
   position: relative;
   display: block;
   padding-left: 40px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 55px;
+  }
 }
 
 .form-diet__icon {
   position: absolute;
-  left: 0;
-  width: 30px;
-  height: 30px;
+  left: -2px;
+  top: -7px;
+  width: 29px;
+  height: 29px;
   border: 1px solid @gray-cdcdcd;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: -2px;
+    top: -6px;
+    width: 39px;
+    height: 39px;
+  }
 }
 
 .form-diet__input:checked + .form-diet__icon::before {
   position: absolute;
   top: 8px;
   left: 8px;
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   background-color: @green-68b738;
   border-radius: 50%;
   content: "";
+
+  @media (min-width: @tablet-width) {
+    left: 11px;
+    top: 11px;
+    width: 17px;
+    height: 17px;
+  }
 }
 
 .form-diet__item {
@@ -54,11 +104,13 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 23px;
+    padding-top: 4px;
+    padding-bottom: 19px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 250px;
+    width: 295px;
+    padding: 1px 85px 22px 32px;
   }
 }
 
