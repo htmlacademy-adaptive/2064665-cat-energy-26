@@ -2,11 +2,33 @@
   display: flex;
   justify-content: space-between;
   font-family: "Arial", sans-serif;
-  color: inherit;
+  color: @gray-444444;
   text-decoration: none;
   width: 100%;
+  padding-top: 6px;
 
   @media (min-width: @tablet-width) {
     margin-right: 22px;
+    padding-top: 0;
   }
+}
+
+.copyright__text:focus,
+.copyright__text:active {
+  opacity: 0.3;
+}
+
+.copyright__logo {
+  margin-top: -5px;
+  fill: @gray-666666;
+}
+
+.copyright__logo:hover {
+  fill: @green-68b738;
+}
+
+.copyright__logo:focus,
+.copyright__logo:active {
+  fill: @green-68b738;
+  opacity: 0.3;
 }

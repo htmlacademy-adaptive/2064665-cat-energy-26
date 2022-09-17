@@ -15,23 +15,52 @@
 
 .main-footer__logo {
   display: block;
-  padding: 40px 0 32px 96px;
+  padding: 40px 0 29px 96px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
   }
+}
+
+.main-footer__logo:hover {
+  opacity: 0.8;
+}
+
+.main-footer__logo:focus {
+  opacity: 0.6;
 }
 
 .main-footer__social {
-  padding: 23px 0 23px;
+  padding: 23px 5px 23px 0;
 
   @media (min-width: @tablet-width) {
     padding: 0;
   }
 }
 
+.logo-vk,
+.logo-youtube,
+.logo-telegram {
+  fill: @gray-666666;
+}
+
+.logo-vk:hover,
+.logo-youtube:hover,
+.logo-telegram:hover {
+  fill: @green-68b738;
+}
+
+.logo-vk:focus,
+.logo-vk:active,
+.logo-youtube:focus,
+.logo-youtube:active,
+.logo-telegram:focus,
+.logo-telegram:active {
+  opacity: 0.6;
+}
+
 .main-footer__copyright {
-  padding: 28px 20px 32px 20px;
+  padding: 18px 20px 22px 20px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -41,7 +70,7 @@
 .main-footer__bottom::after {
   content: "";
   position: absolute;
-  bottom: 170px;
+  bottom: 142px;
   left: 20px;
   width: 280px;
   height: 1px;

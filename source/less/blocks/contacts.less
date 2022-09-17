@@ -4,14 +4,16 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    padding: 60px 70px 63px;
+    padding: 57px 70px 61px;
   }
 
   @media (min-width: @desktop-width) {
+    box-sizing: border-box;
     position: absolute;
     top: 95px;
     left: 110px;
     width: 565px;
+    padding: 57px 75px 61px 80px;
   }
 }
 
@@ -21,11 +23,13 @@
   line-height: 20px;
   margin: 0;
   text-transform: uppercase;
+  width: 120%;
 
   @media (min-width: @tablet-width) {
     width: 172px;
     font-size: 20px;
     line-height: 26px;
+    padding-top: 3px;
   }
 }
 
@@ -40,9 +44,15 @@
     font-size: 16px;
     text-align: end;
   }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+  }
 }
 
 .contacts__break {
+  display: none;
+
   @media (min-width: @tablet-width) {
     display: block;
     height: 19px;

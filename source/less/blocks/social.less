@@ -3,8 +3,21 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 1px;
+    margin-left: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 24px;
+  }
 }
 
 .social__item {
-  margin-right: 20px;
+  margin-right: 28px;
+}
+
+.social__item:last-of-type {
+  margin-right: 0;
 }

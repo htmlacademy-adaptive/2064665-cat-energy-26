@@ -1,9 +1,9 @@
 .addition-item {
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-top: 1px solid @gray-cdcdcd;
 
   @media (min-width: @tablet-width) {
-    padding: 26px 38px;
+    padding: 26px 38px 25px;
     display: grid;
     grid-template-rows: 46px 40px;
     grid-template-columns: auto 225px;
@@ -16,8 +16,8 @@
   @media (min-width: @desktop-width) {
     align-items: center;
     padding: 0;
-    grid-template-rows: 72px;
-    grid-template-columns: 325px 245px 80px 245px;
+    grid-template-rows: 71px;
+    grid-template-columns: 325px 325px 245px;
   }
 }
 
@@ -43,19 +43,26 @@
     grid-column: 2 / 3;
     font-size: 16px;
     line-height: 20px;
+    column-gap: 49px;
+    justify-content: flex-end;
+    padding-top: 3px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 0 0;
+    padding: 5px 0 0 0;
+    display: grid;
+    grid-template-columns: 244px 82px;
+    column-gap: 0;
   }
 }
 
 .addition-item__title {
   font-weight: 400;
+  font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   margin: 0;
-  padding: 13px 0 13px 0;
+  padding: 12px 0 13px 1px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -72,27 +79,23 @@
 }
 
 .addition-item__type {
-  // font-family: "Arial", sans-serif;
-  // font-size: 14px;
-  // line-height: 14px;
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+  }
+}
+
+.addition-item__price {
+  margin: 0;
 
   @media (min-width: @desktop-width) {
     grid-column: 2 / 3;
   }
 }
 
-.addition-item__price {
-  // font-family: "Arial", sans-serif;
-  // font-size: 14px;
-  // line-height: 14px;
-  margin: 0;
-
-  @media (min-width: @desktop-width) {
-    grid-column: 3 / 4;
-  }
-}
-
 li .addition-item__button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   @media (min-width: @tablet-width) {
     grid-row: 2 / 3;
     grid-column: 1 / -1;
@@ -100,7 +103,7 @@ li .addition-item__button {
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 4 / 5;
+    grid-column: 3 / 4;
     grid-row: 1 / 2;
     width: 244px;
     min-height: 40px;

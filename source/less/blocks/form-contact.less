@@ -3,24 +3,54 @@
   border: none;
 
   @media (min-width: @tablet-width) {
-    padding: 0 40px 65px;
+    padding: 0 35px 44px 41px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 65px;
+    padding: 0 0 44px;
   }
 }
 
 .form-contact__title {
+  position: relative;
   font-size: 24px;
   line-height: 26px;
-  padding: 0;
-  padding-bottom: 10px;
+  padding: 15px 0 11px 0;
+  margin-left: -2px;
 
   @media (min-width: @tablet-width) {
+    background-color: @white;
     font-size: 36px;
     line-height: 36px;
-    padding-bottom: 76px;
+    padding: 0 41px 76px 39px;
+    margin-left: -42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 79px;
+  }
+}
+
+.form-contact__title::after {
+  content: "";
+  position: absolute;
+  top: 32px;
+  right: -22px;
+  width: 99px;
+  height: 2px;
+  background-color: @green-68b738;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    right: -145px;
+    width: calc(100% + 175px);
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 23px;
+    right: -777px;
+    width: calc(200% + 253px);
   }
 }
 
@@ -36,30 +66,58 @@
 }
 
 .form-contact__owner-data {
+  position: relative;
   padding-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .form-contact__owner-contact {
   color: @gray-444444;
   text-transform: uppercase;
+  margin-right: 4px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 14px;
+    margin-left: -4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 13px;
+    margin-left: 0;
   }
 }
 
 .form-contact__owner-input {
   box-sizing: border-box;
   font: inherit;
-  padding: 13px 40px 15px 15px;
+  padding: 8px 40px 9px 15px;
+  border: 1px solid @white;
+  outline: 1px solid @gray-e7e7e7;
+
+  @media (min-width: @tablet-width) {
+    padding: 12px 40px 12px 19px;
+  }
+}
+
+.form-contact__owner-input:hover {
+  outline-color: @gray-cdcdcd;
+}
+
+.form-contact__owner-input:focus {          //не совсем понятно, что делать с input error
+  border-color: @gray-444444;
+  outline-color: @gray-444444;
 }
 
 .form-contact__owner-input--email {
-  width: 220px;
+  width: 218px;
 
   @media (min-width: @tablet-width) {
-    width: 550px;
+    width: 552px;
   }
 
   @media (min-width: @desktop-width) {
@@ -67,16 +125,52 @@
   }
 }
 
-.form-contact__owner-input--phone {
-  width: 205px;
+.form-contact__icon-email {
+  position: absolute;
+  fill: @white;
+  stroke: @gray-222222;
+  top: 15px;
+  right: 14px;
 
   @media (min-width: @tablet-width) {
-    width: 535px;
+    top: 17px;
+    right: 16px;
+  }
+}
+
+.form-contact__icon-email:focus,
+.form-contact__icon-email:active {
+  stroke: @green-68b738;
+}
+
+.form-contact__owner-input--phone {
+  width: 201px;
+
+  @media (min-width: @tablet-width) {
+    width: 530px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     width: 472px;
   }
+}
+
+.form-contact__icon-phone {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  fill: @gray-222222;
+
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    right: 16px;
+  }
+}
+
+//непонятно как раскрасить иконку при input:focus
+.form-contact__icon-phone:focus,
+.form-contact__icon-phone:active {
+  fill: @green-68b738;
 }
 
 .form-contact__owner-input::placeholder {

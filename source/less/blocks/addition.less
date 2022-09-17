@@ -1,3 +1,7 @@
+.addition {
+  position: relative;
+}
+
 .addition__title {
   display: block;
   font-weight: 400;
@@ -7,15 +11,42 @@
   padding: 25px 0 36px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 68px 0 80px 37px;
+    padding: 66px 0 80px 37px;
+    margin: 0 297px 0 0;
     font-size: 36px;
     line-height: 36px;
+    background-color: @white;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 76px 0 81px 0;
+    padding: 7px 0 81px 40px;
+    margin: 0 847px 0 -40px;
   }
 }
+
+.addition__title::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  width: 53px;
+  height: 2px;
+  background-color: @green-68b738;
+
+  @media (min-width: @tablet-width) {
+    top: 89px;
+    right: -30px;
+    width: calc(100% + 60px);
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 32px;
+    right: -110px;
+    width: calc(100% + 220px);
+  }
+}
+
 
 .addition__list {
   padding: 0 0 35px 0;

@@ -3,6 +3,7 @@
   background-size: 320px 302px;
   background-repeat: no-repeat;
   position: relative;
+  margin-top: 3px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/cat-tongue@2x.jpg");
@@ -15,7 +16,7 @@
 
 .main-container__promo {
   @media (min-width: @desktop-width) {
-    padding: 111px 0 373px 190px;
+    padding: 106px 0 373px 190px;
   }
 }
 
@@ -29,14 +30,24 @@
 
   @media (min-width: @tablet-width) {
     color: @black;
-    padding: 62px 0 0 87px;
-    margin-bottom: 40px;
+    padding: 28px 0 0 117px;
+    margin-bottom: 42px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0;
+    margin-bottom: 41px;
+  }
+}
+
+.main-container__title-space {
+  display: inline-block;
+  width: 5px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -46,11 +57,11 @@
   line-height: 14px;
   color: @white;
   margin: 0;
-  padding: 20px 61px 290px;
+  padding: 0 61px 290px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 0 0 629px 87px;
+    padding: 0 0 629px 118px;
     font-size: 20px;
     line-height: 20px;
     color: @black;
@@ -63,21 +74,20 @@
 
 .main-container__product {
   position: absolute;
-  left: 10px;
-  top: 170px;
+  left: 20px;
+  top: 168px;
 
   @media (min-width: @tablet-width) {
     width: 709px;
     height: 609px;
-    left: 40px;
-    top: 270px;
+    left: 30px;
+    top: 230px;
     z-index: -1;
   }
 
   @media (min-width: @desktop-width) {
-    // position: absolute;
-    top: 20px;
-    left: 585px;
+    top: 24px;
+    left: 557px;
     width: 552px;
     height: 499px;
   }
@@ -86,17 +96,17 @@
 .main-container__cat-slim {
   content: url("../img/cat-slim.svg");
   position: absolute;
-  top: 20px;
-  left: 40px;
+  top: 21px;
+  left: 22px;
 
   @media (min-width: @tablet-width) {
-    top: 92px;
+    top: 79px;
     left: 446px;
     width: 200px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 47px;
+    top: 39px;
     left: 52px;
     width: 100px;
   }
@@ -105,17 +115,17 @@
 .main-container__cat-pro {
   content: url("../img/cat-pro.svg");
   position: absolute;
-  top: 20px;
-  left: 33px;
+  top: 24px;
+  left: 13px;
 
   @media (min-width: @tablet-width) {
-    top: 92px;
-    left: 412px;
+    top: 91px;
+    left: 411px;
     width: 268px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 47px;
+    top: 45px;
     left: 33px;
     width: 134px;
   }
@@ -124,8 +134,8 @@
 .main-container__diet {
   position: relative;
   background-color: @gray-f2f2f2;
-  padding: 30px 20px 22px;
-  margin-bottom: 20px;
+  padding: 30px 0 22px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
@@ -146,14 +156,15 @@
 .main-container__button {
   font-size: 14px;
   line-height: 18px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-top: 12px;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 300px;
-    left: 87px;
+    top: 247px;
+    left: 120px;
     width: 244px;
     height: 54px;
     font-size: 20px;
@@ -163,10 +174,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 320px;
+    top: 327px;
     left: 190px;
   }
 }
+
+// .main-container__button:focus {
+//   color: rgba(255, 255, 255, 0.3);
+// }
 
 .main-container__diet-title {
   font-weight: 400;
@@ -177,14 +192,14 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-bottom: 54px;
+    margin-bottom: 24px;
     font-size: 36px;
     line-height: 36px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 73px;
-    padding: 30px 0 0 214px;
+    padding: 34px 0 0 162px;
   }
 }
 
@@ -192,7 +207,7 @@
   font-family: "Arial", sans-serif;
   font-size: 14px;
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 41px;
   padding: 0 27px 0 20px;
   position: relative;
 
@@ -204,8 +219,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 52px 0;
-    margin-bottom: 23px;
+    margin-bottom: 29px;
   }
 }
 
@@ -230,6 +244,7 @@
   text-decoration: none;
   padding: 10px;
   margin-left: 10px;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -238,16 +253,24 @@
   }
 }
 
-.main-container__diet-button::after {
-  position: absolute;
-  content: url("../img/arrow.svg");
-  left: 125px;
-
-  @media (min-width: @tablet-width) {
-    left: 160px;
-  }
+.main-container__diet-button:focus {
+  opacity: 0.3;
 }
 
+.main-container__diet-button::after {
+  position: absolute;
+  content: url("../img/arrow.svg");     //с увеличением стрелки просидел час, устал и не осилил
+  left: 120px;
+
+  @media (min-width: @tablet-width) {
+    left: 183px;
+    bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 185px;
+  }
+}
 
 .main-container__diet-wrapper {
   padding: 0 20px;
