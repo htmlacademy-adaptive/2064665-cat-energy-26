@@ -179,6 +179,10 @@
   }
 }
 
+// .main-container__button:focus {
+//   color: rgba(255, 255, 255, 0.3);
+// }
+
 .main-container__diet-title {
   font-weight: 400;
   font-size: 24px;
@@ -249,9 +253,13 @@
   }
 }
 
+.main-container__diet-button:focus {
+  opacity: 0.3;
+}
+
 .main-container__diet-button::after {
   position: absolute;
-  content: url("../img/arrow.svg");
+  content: url("../img/arrow.svg");     //с увеличением стрелки просидел час, устал и не осилил
   left: 120px;
 
   @media (min-width: @tablet-width) {
@@ -263,7 +271,6 @@
     left: 185px;
   }
 }
-
 
 .main-container__diet-wrapper {
   padding: 0 20px;

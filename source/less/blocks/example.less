@@ -153,21 +153,44 @@
   border-radius: 2px;
 }
 
+.example__compare-slider:hover {
+  background-color: @green-68b738;
+}
+
+.example__compare-slider:focus,
+.example__compare-slider:active {
+  background-color: @green-5eaa2f;
+  opacity: 0.6;
+}
+
 .example__compare-toggle {
   position: absolute;
   border: none;
   border-radius: 50%;
   padding: 0;
-  // margin: 0;
   width: 40px;
   height: 40px;
   left: calc(50% - 20px);
   top: calc(50% - 20px);
 }
 
+
+//кнопка не красится при наведении на разделитель
 .example__compare-circle {
-  stroke: @red;
-  color: @red;
+  stroke: @gray-666666;
+  color: @gray-666666;
+}
+
+.example__compare-circle:hover {
+  stroke: @green-68b738;
+  color: @green-68b738;
+}
+
+.example__compare-circle:focus,
+.example__compare-circle:active {
+  stroke: @green-5eaa2f;
+  color: @green-5eaa2f;
+  opacity: 0.6;
 }
 
 .example::after {

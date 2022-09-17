@@ -96,10 +96,21 @@
   box-sizing: border-box;
   font: inherit;
   padding: 8px 40px 9px 15px;
+  border: 1px solid @white;
+  outline: 1px solid @gray-e7e7e7;
 
   @media (min-width: @tablet-width) {
     padding: 12px 40px 12px 19px;
   }
+}
+
+.form-contact__owner-input:hover {
+  outline-color: @gray-cdcdcd;
+}
+
+.form-contact__owner-input:focus {          //не совсем понятно, что делать с input error
+  border-color: @gray-444444;
+  outline-color: @gray-444444;
 }
 
 .form-contact__owner-input--email {
@@ -117,6 +128,7 @@
 .form-contact__icon-email {
   position: absolute;
   fill: @white;
+  stroke: @gray-222222;
   top: 15px;
   right: 14px;
 
@@ -124,6 +136,11 @@
     top: 17px;
     right: 16px;
   }
+}
+
+.form-contact__icon-email:focus,
+.form-contact__icon-email:active {
+  stroke: @green-68b738;
 }
 
 .form-contact__owner-input--phone {
@@ -142,11 +159,18 @@
   position: absolute;
   top: 13px;
   right: 12px;
+  fill: @gray-222222;
 
   @media (min-width: @tablet-width) {
     top: 15px;
     right: 16px;
   }
+}
+
+//непонятно как раскрасить иконку при input:focus
+.form-contact__icon-phone:focus,
+.form-contact__icon-phone:active {
+  fill: @green-68b738;
 }
 
 .form-contact__owner-input::placeholder {
