@@ -8,10 +8,11 @@
     <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">   <!--в favicon-generator я не увидел иконки размером 512*512, которую нужно подключить в манифесте согласно демонстрации. Где ее брать? -->
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <script src="js/script.min.js" defer></script>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page__body page__body--index">
+  <body class="page__body">
     <header class="main-header">
       <nav class="main-nav">
         <div class="main-nav__logo-wrapper">
@@ -26,7 +27,7 @@
             <img class="main-nav__logo-word" src="img/logo-mobile-word.svg" width="101" height="18" alt="Интернет-магазин Cat Energy.">
           </a>
         </div>
-        <div class="main-nav__wrapper main-nav__wrapper--opened main-nav__wrapper--nojs">
+        <div class="main-nav__wrapper main-nav__wrapper--index main-nav__wrapper--opened main-nav__wrapper--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list reset-list">
@@ -53,7 +54,7 @@
           <source type="image/webp" srcset="img/chiken-can.webp 1x, img/chiken-can@2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/chiken-can-desktop.png 1x, img/chiken-can-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/chiken-can-tablet.png 1x, img/chiken-can-tablet@2x.png 2x">
-          <img class="main-container__product" src="img/chiken-can.png" width="280" height="270" srcset="img/chiken-can@2x.png 2x" alt="Банка Cat Energy со вкусом курицы.">
+          <img class="main-container__product" src="img/chiken-can.png" width="280" height="270" srcset="img/chiken-can@2x.png 2x" loading="lazy" alt="Банка Cat Energy со вкусом курицы.">
         </picture>
         <a class="main-container__button button" href="form.html">подобрать программу</a>
       </section>
@@ -133,13 +134,13 @@
           <div class="example__compare-image example__compare-image--before">
             <picture>
               <source media="(min-width: 768px)" srcset="img/tablet-before@1x.png 1x, img/tablet-before@2x.png 2x">
-              <img class="" src="img/mobile-before@1x.png" srcset="img/mobile-before@2x.png 2x" width="140" height="256" alt="Толстый кот.">
+              <img class="" src="img/mobile-before@1x.png" srcset="img/mobile-before@2x.png 2x" width="140" height="256" loading="lazy" alt="Толстый кот.">
             </picture>
           </div>
           <div class="example__compare-image example__compare-image--after">
             <picture>
               <source media="(min-width: 768px)" srcset="img/tablet-after@1x.png 1x, img/tablet-after@2x.png 2x">
-              <img class="" src="img/mobile-after@1x.png" srcset="img/mobile-after@2x.png 2x" width="140" height="256" alt="Стройный кот.">
+              <img class="" src="img/mobile-after@1x.png" srcset="img/mobile-after@2x.png 2x" width="140" height="256" loading="lazy" alt="Стройный кот.">
             </picture>
           </div>
         </div>
