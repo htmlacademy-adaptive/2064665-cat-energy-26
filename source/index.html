@@ -8,6 +8,7 @@
     <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">   <!--в favicon-generator я не увидел иконки размером 512*512, которую нужно подключить в манифесте согласно демонстрации. Где ее брать? -->
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <script src="js/script.min.js" defer></script>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -26,7 +27,7 @@
             <img class="main-nav__logo-word" src="img/logo-mobile-word.svg" width="101" height="18" alt="Интернет-магазин Cat Energy.">
           </a>
         </div>
-        <div class="main-nav__wrapper main-nav__wrapper--opened main-nav__wrapper--nojs">
+        <div class="main-nav__wrapper main-nav__wrapper--index main-nav__wrapper--opened main-nav__wrapper--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list reset-list">
