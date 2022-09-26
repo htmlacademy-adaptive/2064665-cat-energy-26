@@ -1,6 +1,14 @@
-.main-footer__wrapper {
-  position: relative;
+.main-footer {
   background-color: @gray-f2f2f2;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.main-footer__wrapper {
+  .container ();
+  position: relative;
 }
 
 .main-footer__contacts {
