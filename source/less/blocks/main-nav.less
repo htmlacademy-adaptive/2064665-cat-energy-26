@@ -160,6 +160,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    // position: relative;
     margin-top: 64px;
     width: 500px;
     margin-left: 538px;
@@ -177,6 +178,29 @@
     height: 694px;
     background-image: url("../img/cat-tongue-desktop.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/cat-tongue-desktop@2x.jpg");
+    }
+  }
+}
+
+.main-nav__wrapper--index {
+  position: relative;
+}
+
+.main-nav__wrapper--index::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: -64px;
+    left: -130px;
+    width: 720px;
+    height: 694px;
+    background-image: url("../img/cat-tongue-desktop.jpg");
+    background-size: 720px 694px;
     background-repeat: no-repeat;
     z-index: -1;
 
